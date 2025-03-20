@@ -134,3 +134,16 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Prisma (Database ORM)
+prisma/migrations/
+prisma/dev.db
+prisma/dev.db-journal
+
+# PostgreSQL (Database)
+*.pgdata
+*.pg_dump
+pgdata/
+*.sql
+postgresql.conf
+pg_hba.conf
