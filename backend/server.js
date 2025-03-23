@@ -16,7 +16,13 @@ app.get("/", (req, res) => {
 // ✅ Use Income Routes
 app.use("/income", incomeRoutes);
 
+// 🚨 Error Handling Middleware (Add this)
+app.use((err, req, res, next) => {
+  console.error("🚨 Server Error:", err.stack);  // Log the full error
+  res.status(500).json({ error: "Internal Server Error", details: err.message });
+});
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  console.log(`✅ Server running on port ${PORT}`);
 });
