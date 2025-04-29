@@ -1,0 +1,46 @@
+.add-page {
+  padding: 2rem;
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+.add-page__header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.add-page__title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.add-page__subtitle {
+  font-size: 1rem;
+  color: #6b7280;
+}
+
+.add-page__content {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .add-page {
+    padding: 1rem;
+  }
+
+  .add-page__title {
+    font-size: 1.75rem;
+  }
+
+  .add-page__content {
+    padding: 1.5rem;
+  }
+} 
