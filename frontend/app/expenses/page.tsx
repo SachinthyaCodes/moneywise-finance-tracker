@@ -85,7 +85,7 @@ export default function ExpensesPage() {
     <div className="p-6 bg-gray-100 min-h-screen">
       {/* ✅ Header Section */}
       <div className="header">
-        <h1>Welcome Back, John</h1>
+        <h1>Welcome Back !</h1>
         <p>Manage and track your expenses effectively</p>
       </div>
 
@@ -105,7 +105,7 @@ export default function ExpensesPage() {
         <div className="search-container">
           <input
             type="text"
-            placeholder="Search expenses..."
+            placeholder="Search Category or Method..."
             className="search-input"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}

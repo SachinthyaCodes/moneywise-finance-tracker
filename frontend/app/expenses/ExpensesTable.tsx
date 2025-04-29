@@ -31,7 +31,7 @@ const ExpensesTable: FC<ExpensesTableProps> = ({ expenses, onDelete, onEdit, for
 
   return (
     <div className="expenses-container">
-      <h2 className="expenses-title">Expenses History</h2>
+      <h2 className="expenses-title">History of Expenses</h2>
       <div className="expenses-table-wrapper">
         <table className="expenses-table">
           <thead>
