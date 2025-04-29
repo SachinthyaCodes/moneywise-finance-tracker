@@ -1,3 +1,8 @@
+//express is imported to create the router.
+//express.Router() is used to define routes.
+
+
+
 const express = require("express");
 const router = express.Router();
 const {
