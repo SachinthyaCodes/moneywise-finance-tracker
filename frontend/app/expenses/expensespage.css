@@ -63,7 +63,7 @@ body {
   
   .search-input:focus {
     border-color: #3182ce;
-    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.5);
+    box-shadow: 0 0 0 3px rgba(47, 178, 235, 0.5);
   }
   
   /* Expenses Table Section */

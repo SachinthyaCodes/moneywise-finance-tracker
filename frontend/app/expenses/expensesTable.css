@@ -112,7 +112,7 @@
   margin-top: 15px;
   font-size: 18px;
   font-weight: bold;
-  color: #333;
+  color: #fc2222;
 }
 
 /* Calculate Button */
@@ -132,7 +132,7 @@
 }
 
 .calculate-btn:hover {
-  background: #0056b3;
+  background: #044183;
 }
 
 /* Responsive Design */
