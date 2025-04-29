@@ -1,5 +1,7 @@
+"use client";
+
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 import styles from "../styles/sidebar.module.css";
 import { 
   FaHome, 
@@ -10,7 +12,7 @@ import {
 } from "react-icons/fa";
 
 const Sidebar = () => {
-  const router = useRouter();
+  const pathname = usePathname();
 
   const navItems = [
     { path: "/", label: "Home", icon: <FaHome /> },
@@ -30,7 +32,7 @@ const Sidebar = () => {
           <Link
             key={item.path}
             href={item.path}
-            className={`${styles.navItem} ${router.pathname === item.path ? styles.active : ''}`}
+            className={`${styles.navItem} ${pathname === item.path ? styles.active : ''}`}
           >
             <span className={styles.icon}>{item.icon}</span>
             <span className={styles.label}>{item.label}</span>
