@@ -1,0 +1,366 @@
+.recurring-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  border: 1px solid #F3F4F6;
+  padding: 1.5rem 1rem 1.5rem 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.1);
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Ensure table takes full width of container */
+.recurring-table table {
+  width: 100%;
+  min-width: 1000px; /* Minimum width before horizontal scroll */
+}
+
+.recurring-table-wrapper {
+  overflow-x: auto;
+  border-radius: 0.5rem;
+}
+
+.recurring-table__header {
+  background-color: #F9FAFB;
+  border-radius: 0.75rem;
+}
+
+.recurring-table__header-cell {
+  padding: 1rem;
+  padding-left: 1.5rem;
+  text-align: left;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  border-bottom: 1px solid #F3F4F6;
+  white-space: nowrap;
+}
+
+.recurring-table__header-cell:first-child {
+  border-top-left-radius: 0.75rem;
+}
+
+.recurring-table__header-cell:last-child {
+  border-top-right-radius: 0.75rem;
+}
+
+.recurring-table__header-cell--center {
+  text-align: center;
+  padding-right: 0.5rem;
+}
+
+.recurring-table__header-cell--name {
+  width: 20%; /* Increased width for name column */
+}
+
+.recurring-table__header-cell--date {
+  width: 12%; /* Increased width for date columns */
+}
+
+.recurring-table__header-cell--autopay {
+  width: 8%; /* Decreased width for autopay column */
+  padding-right: 0.5rem;
+}
+
+.recurring-table__header-cell--actions {
+  width: 6%; /* Decreased width for actions column */
+  padding-right: 0.5rem;
+}
+
+.recurring-table__row {
+  transition: all 0.2s ease;
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.recurring-table__row:hover {
+  background-color: #F9FAFB;
+}
+
+.recurring-table__cell {
+  padding: 1rem;
+  padding-left: 1.5rem;
+  font-size: 0.875rem;
+  color: #111827;
+  border-bottom: 1px solid #F3F4F6;
+}
+
+.recurring-table__cell--amount {
+  font-weight: 600;
+  color: #2563EB;
+}
+
+.recurring-table__cell--center {
+  text-align: center;
+  padding-right: 0.5rem;
+}
+
+.recurring-table__select {
+  width: 12rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  border: 1px solid #E5E7EB;
+  border-radius: 0.75rem;
+  background-color: #F9FAFB;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.recurring-table__select:focus {
+  border-color: #3B82F6;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1), 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.recurring-table__toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.recurring-table__toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 3.5rem; /* Increased width */
+  height: 1.75rem;
+  margin: 0;
+}
+
+.recurring-table__toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+}
+
+.recurring-table__toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #E5E7EB;
+  transition: .3s ease-in-out;
+  border-radius: 1.75rem;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.recurring-table__toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 1.25rem;
+  width: 1.25rem;
+  left: 0.25rem;
+  bottom: 0.25rem;
+  background-color: white;
+  transition: .3s ease-in-out;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+input:checked + .recurring-table__toggle-slider {
+  background-color: #3B82F6;
+}
+
+input:focus + .recurring-table__toggle-slider {
+  box-shadow: 0 0 1px #3B82F6;
+}
+
+input:checked + .recurring-table__toggle-slider:before {
+  transform: translateX(1.75rem); /* Increased translation distance */
+}
+
+/* Disabled state */
+.recurring-table__toggle-switch input:disabled + .recurring-table__toggle-slider {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Hover effect */
+.recurring-table__toggle-slider:hover {
+  background-color: #D1D5DB;
+}
+
+input:checked + .recurring-table__toggle-slider:hover {
+  background-color: #2563EB;
+}
+
+.recurring-table__delete-button {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  background: none;
+  color: #9CA3AF;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+}
+
+.recurring-table__delete-button:hover {
+  color: #EF4444;
+  background-color: #FEE2E2;
+  transform: scale(1.05);
+}
+
+.recurring-table__delete-button:active {
+  transform: scale(0.95);
+}
+
+.recurring-table__delete-icon {
+  width: 1rem;
+  height: 1rem;
+  transition: all 0.2s ease;
+}
+
+.recurring-table__delete-button:hover .recurring-table__delete-icon {
+  transform: scale(1.1);
+}
+
+.recurring-table__due-date-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-right: 8px;
+}
+
+.recurring-table__due-date-indicator {
+  min-width: 8px;
+  min-height: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #10B981; /* Green for far due date */
+  transition: background-color 0.3s ease;
+  flex-shrink: 0; /* Prevent the dot from shrinking */
+  display: inline-block; /* Ensure consistent rendering */
+}
+
+.recurring-table__due-date-indicator.warning {
+  background-color: #F59E0B; /* Yellow for approaching due date */
+}
+
+.recurring-table__due-date-indicator.danger {
+  background-color: #EF4444; /* Red for close due date */
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(0.625rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.recurring-table__amount-display {
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.recurring-table__amount-display:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.recurring-table__amount-edit {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.recurring-table__currency {
+  color: #6B7280;
+  font-weight: 500;
+}
+
+.recurring-table__amount-input {
+  width: 100px;
+  padding: 4px 8px;
+  border: 1px solid #E5E7EB;
+  border-radius: 4px;
+  font-size: inherit;
+  color: inherit;
+  background-color: white;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.recurring-table__amount-input:focus {
+  border-color: #3B82F6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+.recurring-table__date-display {
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  font-size: 0.875rem;
+  color: #374151;
+  min-width: 70px;
+  display: inline-block;
+}
+
+.recurring-table__date-display:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.recurring-table__date-input {
+  padding: 4px 8px;
+  border: 1px solid #E5E7EB;
+  border-radius: 4px;
+  font-size: inherit;
+  color: inherit;
+  background-color: white;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 130px;
+}
+
+.recurring-table__date-input:focus {
+  border-color: #3B82F6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+.recurring-table__date-input:hover {
+  border-color: #D1D5DB;
+}
+
+/* Payment Modal Styles */
+.payment-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.payment-modal__content {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 500px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+} 

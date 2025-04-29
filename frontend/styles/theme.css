@@ -1,0 +1,333 @@
+/* Import Manrope font */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+/* Theme Variables */
+:root {
+    /* Primary Colors */
+    --color-primary: #635BFF;
+    --color-secondary: #16CDC7;
+    --color-primary-emphasis: #5249fe;
+    --color-secondary-emphasis: #1cc3bd;
+    
+    /* Light Variants */
+    --color-lightprimary: #635BFF40;
+    --color-lightsecondary: #16CDC740;
+    --color-lightsuccess: #2EA95C40;
+    --color-lighterror: #FF669260;
+    --color-lightinfo: #46caeb40;
+    --color-lightwarning: #F8C20A40;
+    
+    /* Status Colors */
+    --color-info: #46CAEB;
+    --color-success: #36c96c;
+    --color-warning: #f8c20a;
+    --color-error: #FF6692;
+    
+    /* Emphasis Colors */
+    --color-error-emphasis: #d9577c;
+    --color-warning-emphasis: #d3a509;
+    --color-success-emphasis: #2ea95c;
+    --color-info-emphasis: #3cacc8;
+    
+    /* Base Colors */
+    --color-white: #fff;
+    --color-dark: #1F2A3D;
+    --color-sky: #0A2540;
+    
+    /* Border Colors */
+    --color-border: #e0e6eb;
+    --color-bordergray: #f3f3f4;
+    --color-darkborder: #333F55;
+    
+    /* Text Colors */
+    --color-text-primary: var(--color-dark);
+    --color-text-secondary: #4a5568;
+    --color-link: #2a3547;
+    --color-darklink: #29343d;
+    --color-bodytext: #4a5568;
+    
+    /* Background Colors */
+    --color-muted: #EFF4FA;
+    --color-darkmuted: #2A3851;
+    --color-lightgray: #F4F7FB;
+    --color-lighthover: #f6f7f9;
+    --color-darkgray: #1A2537;
+    --color-surface-ld: #ffffff;
+}
+
+/* Base Styles */
+body {
+    font-family: 'Manrope', system-ui, serif;
+    color: var(--color-text-primary);
+    font-size: 14px;
+    background-color: var(--color-surface-ld);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-text-primary);
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    letter-spacing: -0.01em;
+}
+
+h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 1.25rem;
+    position: relative;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    width: 3rem;
+    height: 3px;
+    background: var(--color-primary);
+    border-radius: 2px;
+}
+
+h2 {
+    font-size: 1.875rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: 0.875rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: 0.75rem;
+}
+
+h5 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: 0.5rem;
+}
+
+h6 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: 0.5rem;
+}
+
+/* Dark Mode Styles */
+.dark {
+    --color-surface-ld: var(--color-dark);
+    --color-text-primary: var(--color-white);
+    --color-text-secondary: #e2e8f0;
+    --color-bodytext: #e2e8f0;
+    --color-border: var(--color-darkborder);
+}
+
+.dark h1, 
+.dark h2, 
+.dark h3, 
+.dark h4, 
+.dark h5, 
+.dark h6 {
+    color: var(--color-white);
+}
+
+.dark h1::after {
+    background: var(--color-primary);
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    padding: 30px;
+    margin: 0 auto;
+}
+
+/* Form Controls */
+.form-control label {
+    color: var(--color-text-primary);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.form-control input,
+.form-control select {
+    border-radius: 9px;
+    border: 1px solid var(--color-border);
+    background: transparent;
+    width: 100%;
+    font-size: 14px;
+    padding: 8px 12px;
+    color: var(--color-text-primary);
+}
+
+.form-control input:focus,
+.form-control select:focus {
+    border-color: var(--color-primary);
+    outline: none;
+    box-shadow: none;
+    ring-offset: 0;
+    ring: transparent;
+}
+
+.form-control input::placeholder {
+    color: var(--color-bodytext);
+    opacity: 0.7;
+}
+
+/* Buttons */
+.btn {
+    padding: 8px 16px;
+    border-radius: 9px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-emphasis);
+}
+
+/* Cards */
+.card {
+    background: var(--color-surface-ld);
+    border-radius: 9px;
+    box-shadow: 0px 2px 4px -1px rgba(175, 182, 201, 0.2);
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-dark);
+    margin-bottom: 4px;
+}
+
+.card-subtitle {
+    font-size: 15px;
+    color: var(--color-bodytext);
+}
+
+/* Dark Mode Card */
+.dark .card {
+    box-shadow: rgba(145, 158, 171, 0.3) 0px 0px 2px 0px, rgba(145, 158, 171, 0.02) 0px 12px 24px -4px;
+}
+
+.dark .card-title {
+    color: var(--color-white);
+}
+
+/* Utility Classes */
+.text-primary {
+    color: var(--color-primary);
+}
+
+.text-secondary {
+    color: var(--color-secondary);
+}
+
+.bg-primary {
+    background-color: var(--color-primary);
+}
+
+.bg-secondary {
+    background-color: var(--color-secondary);
+}
+
+/* Status Colors */
+.text-success {
+    color: var(--color-success);
+}
+
+.text-warning {
+    color: var(--color-warning);
+}
+
+.text-error {
+    color: var(--color-error);
+}
+
+.text-info {
+    color: var(--color-info);
+}
+
+/* Border Utilities */
+.border-ld {
+    border-color: var(--color-border);
+}
+
+.dark .border-ld {
+    border-color: var(--color-darkborder);
+}
+
+/* Hover Effects */
+.hover-bg {
+    transition: background-color 0.2s ease;
+}
+
+.hover-bg:hover {
+    background-color: var(--color-lighthover);
+}
+
+.dark .hover-bg:hover {
+    background-color: var(--color-darkmuted);
+}
+
+/* Custom Shadows */
+.shadow-elevation1 {
+    box-shadow: 0px 12px 30px -2px rgba(58,75,116,0.14);
+}
+
+.shadow-elevation2 {
+    box-shadow: 0px 24px 24px -12px rgba(0,0,0,0.05);
+}
+
+.shadow-elevation3 {
+    box-shadow: 0px 24px 24px -12px rgba(99,91,255,0.15);
+}
+
+.shadow-elevation4 {
+    box-shadow: 0px 12px 12px -6px rgba(0,0,0,0.15);
+}
+
+/* Responsive Typography */
+@media (min-width: 640px) {
+    body {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+/* Table Styles */
+table {
+    color: var(--color-text-primary);
+}
+
+th {
+    color: var(--color-text-primary) !important;
+}
+
+td {
+    color: var(--color-text-primary);
+} 
