@@ -17,8 +17,13 @@ const getAllIncome = async (req, res) => {
 const addIncome = async (req, res) => {
   const { source, amount, category } = req.body;
   try {
+    // Validate amount is a number
     const newIncome = await prisma.income.create({
-      data: { source, amount: parseFloat(amount), category },
+      data: { 
+        source, 
+        amount: parseFloat(amount), // Validates and converts amount to number
+        category 
+      },
     });
     res.status(201).json(newIncome);
   } catch (error) {

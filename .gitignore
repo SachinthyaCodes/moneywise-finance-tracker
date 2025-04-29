@@ -125,3 +125,4 @@ pgdata/
 *.sql
 postgresql.conf
 pg_hba.conf
+node_modules
