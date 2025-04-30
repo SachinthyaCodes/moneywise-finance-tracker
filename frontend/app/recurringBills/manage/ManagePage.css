@@ -1,0 +1,42 @@
+.manage-page {
+  padding: 2rem;
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+.manage-page__header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.manage-page__title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.manage-page__subtitle {
+  font-size: 1rem;
+  color: #6b7280;
+}
+
+/* Update table container styles */
+.recurring-table {
+  margin: 0 auto;
+  max-width: 100%;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .manage-page {
+    padding: 1rem;
+  }
+
+  .manage-page__title {
+    font-size: 1.75rem;
+  }
+} 

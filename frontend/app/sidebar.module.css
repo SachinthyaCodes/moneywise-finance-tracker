@@ -1,0 +1,91 @@
+.logoutSection {
+  position: fixed;
+  bottom: 0;
+  width: 240px;
+  padding: 1rem;
+  border-top: 1px solid #e5e7eb;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.userAvatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #3b82f6;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.userEmail {
+  font-size: 0.875rem;
+  color: #4b5563;
+  margin-bottom: 0.25rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.logoutButton {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #f3f4f6;
+  border: none;
+  border-radius: 0.375rem;
+  color: #4b5563;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.logoutButton:hover {
+  background-color: #e5e7eb;
+  color: #1f2937;
+}
+
+.logoutButton:active {
+  background-color: #d1d5db;
+}
+
+.loginButton {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.loginButton:hover {
+  background-color: #2563eb;
+}
+
+.loginButton svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.userInfo {
+  flex: 1;
+  min-width: 0; /* This ensures text-overflow works */
+} 

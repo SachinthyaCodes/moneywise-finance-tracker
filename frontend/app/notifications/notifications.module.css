@@ -1,0 +1,208 @@
+.container {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.card {
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.header {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  padding: 2rem 1.5rem;
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.iconWrapper {
+  background-color: white;
+  padding: 0.75rem;
+  border-radius: 9999px;
+}
+
+.headerTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+}
+
+.headerSubtitle {
+  color: #dbeafe;
+  margin: 0.25rem 0 0 0;
+}
+
+.content {
+  padding: 1.5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.section {
+  background-color: #f9fafb;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.sectionTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.sectionDescription {
+  color: #4b5563;
+  margin: 0 0 1rem 0;
+}
+
+.setting {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.settingInfo {
+  flex: 1;
+}
+
+.settingLabel {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.25rem;
+}
+
+.settingDescription {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.toggleInput {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggleTrack {
+  width: 2.75rem;
+  height: 1.5rem;
+  background-color: #e5e7eb;
+  border-radius: 9999px;
+  transition: background-color 0.2s;
+}
+
+.toggleInput:checked + .toggleTrack {
+  background-color: #2563eb;
+}
+
+.toggleThumb {
+  position: absolute;
+  top: 0.125rem;
+  left: 0.125rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: white;
+  border-radius: 9999px;
+  transition: transform 0.2s;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.toggleInput:checked + .toggleTrack .toggleThumb {
+  transform: translateX(1.25rem);
+}
+
+.timingInput {
+  width: 5rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  color: #111827;
+  transition: all 0.2s;
+}
+
+.timingInput:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+.timingUnit {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-left: 0.5rem;
+}
+
+.saveButton {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button {
+  padding: 0.75rem 1.5rem;
+  background-color: #2563eb;
+  color: white;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+}
+
+.button:hover {
+  background-color: #1d4ed8;
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+.loadingContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.spinner {
+  width: 3rem;
+  height: 3rem;
+  border: 3px solid #e5e7eb;
+  border-top-color: #2563eb;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+} 

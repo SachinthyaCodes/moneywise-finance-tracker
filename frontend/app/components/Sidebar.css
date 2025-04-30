@@ -1,0 +1,290 @@
+.sidebar {
+  width: 280px;
+  height: 100vh;
+  background-color: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 50;
+  transition: all 0.3s ease;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar__header {
+  padding: 2rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.sidebar__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #3b82f6;
+  margin: 0;
+}
+
+.sidebar__subtitle {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0.25rem 0 0 0;
+}
+
+.sidebar__nav {
+  flex: 1;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow-y: auto;
+}
+
+.sidebar__link {
+  display: flex;
+  align-items: center;
+  padding: 0.875rem 1.25rem;
+  color: #4b5563;
+  text-decoration: none;
+  border-radius: 0.75rem;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 100%;
+  text-align: left;
+  gap: 0.875rem;
+}
+
+.sidebar__link:hover {
+  background-color: #f3f4f6;
+  color: #3b82f6;
+}
+
+.sidebar__link--active {
+  background-color: #eff6ff;
+  color: #3b82f6;
+}
+
+.sidebar__icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+}
+
+.sidebar__footer {
+  padding: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.sidebar__profile {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.sidebar__profile:hover {
+  background-color: #f3f4f6;
+}
+
+.sidebar__avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #e5e7eb;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.75rem;
+}
+
+.sidebar__avatar-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #6b7280;
+}
+
+.sidebar__profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar__profile-name {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #4b5563;
+}
+
+.sidebar__profile-email {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar--open {
+    transform: translateX(0);
+  }
+}
+
+/* Custom scrollbar for the navigation */
+.sidebar__nav::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar__nav::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar__nav::-webkit-scrollbar-thumb {
+  background: #e5e7eb;
+  border-radius: 2px;
+}
+
+.sidebar__nav::-webkit-scrollbar-thumb:hover {
+  background: #d1d5db;
+}
+
+.sidebar__dropdown {
+  position: relative;
+}
+
+.sidebar__dropdown-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0.875rem 1.25rem;
+  color: #4b5563;
+  border-radius: 0.75rem;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+}
+
+.sidebar__dropdown-toggle:hover {
+  background-color: #f3f4f6;
+  color: #3b82f6;
+}
+
+.sidebar__dropdown--active .sidebar__dropdown-toggle {
+  background-color: #eff6ff;
+  color: #3b82f6;
+}
+
+.sidebar__dropdown-arrow {
+  width: 1rem;
+  height: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.sidebar__dropdown-arrow--open {
+  transform: rotate(-180deg);
+}
+
+.sidebar__dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  margin-left: 1rem;
+}
+
+.sidebar__dropdown-content--open {
+  max-height: 200px;
+}
+
+.sidebar__dropdown-link {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1.25rem;
+  color: #6b7280;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+  font-size: 0.938rem;
+  margin-top: 0.25rem;
+  gap: 0.75rem;
+}
+
+.sidebar__dropdown-link:hover {
+  background-color: #f3f4f6;
+  color: #3b82f6;
+}
+
+.sidebar__dropdown-link--active {
+  background-color: #eff6ff;
+  color: #3b82f6;
+}
+
+.sidebar__dropdown-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+}
+
+/* Stripe Settings Modal */
+.sidebar__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.sidebar__modal-content {
+  background: white;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar__modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.sidebar__modal-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.sidebar__modal-close {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: #4a5568;
+  transition: color 0.2s ease;
+}
+
+.sidebar__modal-close:hover {
+  color: #1a1a1a;
+}
+
+.sidebar__modal-body {
+  padding: 1.5rem;
+} 

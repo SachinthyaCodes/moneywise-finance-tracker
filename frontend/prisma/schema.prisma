@@ -1,0 +1,61 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+}
+
+model Income {
+  id       String   @id @default(uuid())
+  category String
+  amount   Float
+  source   String
+  date     DateTime @default(now())
+}
+
+model User {
+  id             Int            @id @default(autoincrement())
+  email          String         @unique
+  password       String
+  stripeCustomerId String?      @unique
+  recurringBills RecurringBill[] @relation("UserRecurringBills")
+}
+
+model RecurringBill {
+  id            Int       @id @default(autoincrement())
+  name          String
+  amount        Float
+  billingCycle  BillingCycle
+  startDate     DateTime
+  dueDate       DateTime
+  paymentMethod PaymentMethod
+  autoPay       Boolean
+  userId        Int
+  user          User      @relation("UserRecurringBills", fields: [userId], references: [id])
+  stripeSubscriptionId String?
+  stripePaymentMethodId String?
+  lastPaymentDate DateTime?
+  paymentStatus PaymentStatus @default(PENDING)
+}
+
+enum BillingCycle {
+  DAILY
+  WEEKLY
+  MONTHLY
+  YEARLY
+}
+
+enum PaymentMethod {
+  CREDIT_CARD
+  PAYPAL
+  BANK_TRANSFER
+}
+
+enum PaymentStatus {
+  PENDING
+  SUCCESS
+  FAILED
+  CANCELLED
+}

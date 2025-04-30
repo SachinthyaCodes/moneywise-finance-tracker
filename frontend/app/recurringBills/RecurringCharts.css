@@ -1,0 +1,141 @@
+.recurring-charts {
+  margin: 1.5rem;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.recurring-charts__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.recurring-charts__card {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.recurring-charts__card:hover {
+  transform: translateY(-2px);
+}
+
+.recurring-charts__card--full-width {
+  grid-column: 1 / -1;
+}
+
+.recurring-charts__title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 1rem;
+}
+
+/* Make charts responsive within their containers */
+.recurring-charts__card > canvas {
+  flex: 1;
+  width: 100% !important;
+  height: calc(100% - 2rem) !important;
+}
+
+@media (max-width: 1024px) {
+  .recurring-charts__grid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .recurring-charts__card {
+    height: 350px;
+  }
+}
+
+@media (max-width: 640px) {
+  .recurring-charts {
+    margin: 1rem;
+    padding: 0.75rem;
+  }
+  
+  .recurring-charts__card {
+    height: 200px;
+  }
+  
+  .recurring-charts__card--full-width {
+    height: 300px;
+  }
+}
+
+.recurring-charts__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding: 0 1rem;
+}
+
+.recurring-charts__main-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1F2937;
+  margin: 0;
+}
+
+.recurring-charts__download-btn {
+  background-color: #2563EB;
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 0.875rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.recurring-charts__download-btn svg {
+  transition: transform 0.2s ease;
+}
+
+.recurring-charts__download-btn:hover {
+  background-color: #1D4ED8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.recurring-charts__download-btn:hover svg {
+  transform: translateY(2px);
+}
+
+.recurring-charts__download-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
+}
+
+.recurring-charts__download-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.recurring-charts__download-btn:disabled {
+  background-color: #93C5FD;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+} 

@@ -1,0 +1,92 @@
+.recurring-page {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.recurring-page__header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.recurring-page__title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.recurring-page__subtitle {
+  font-size: 1.125rem;
+  color: #6B7280;
+}
+
+.recurring-page__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.recurring-page__card {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  border: 1px solid #E5E7EB;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
+.recurring-page__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-color: #3B82F6;
+}
+
+.recurring-page__card-content {
+  text-align: center;
+}
+
+.recurring-page__card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.recurring-page__card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.75rem;
+}
+
+.recurring-page__card-description {
+  font-size: 1rem;
+  color: #6B7280;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .recurring-page {
+    padding: 1rem;
+  }
+
+  .recurring-page__grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .recurring-page__card {
+    padding: 1.5rem;
+  }
+
+  .recurring-page__title {
+    font-size: 1.75rem;
+  }
+
+  .recurring-page__card-title {
+    font-size: 1.25rem;
+  }
+} 

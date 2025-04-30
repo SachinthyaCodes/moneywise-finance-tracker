@@ -1,6 +1,0 @@
-projectKey=moneywise-finance-tracker
-serverUrl=http://localhost:9000
-serverVersion=25.4.0.105899
-dashboardUrl=http://localhost:9000/dashboard?id=moneywise-finance-tracker
-ceTaskId=5608ffd3-2139-4109-a4fc-1e347c9c3f46
-ceTaskUrl=http://localhost:9000/api/ce/task?id=5608ffd3-2139-4109-a4fc-1e347c9c3f46
