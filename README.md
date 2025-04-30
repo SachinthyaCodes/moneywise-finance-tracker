@@ -1,9 +1,10 @@
-<<<<<<< HEAD
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MoneyWise Finance Tracker
+
+💰 **MoneyWise** is a personal finance management app designed to help users track their income, expenses, and financial goals efficiently. Built with **Next.js**, **Prisma**, and **PostgreSQL**, it provides real-time insights with interactive charts, budget tracking, and AI-powered financial recommendations. 🚀
 
 ## Getting Started
 
-First, run the development server:
+To run the development server:
 
 ```bash
 npm run dev
@@ -13,29 +14,33 @@ yarn dev
 pnpm dev
 # or
 bun dev
-```
+Then open http://localhost:3000 in your browser.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+You can start editing the app by modifying app/page.tsx. The page auto-updates as you save the file.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This project uses next/font to automatically optimize and load Geist, a new font family for Vercel.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Features
+🔎 Income & Expense Tracking
 
-## Learn More
+📊 Visualized Charts and Summaries
 
-To learn more about Next.js, take a look at the following resources:
+🎯 Goal Setting
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+🧠 AI-powered Financial Insights
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+🔐 Secure Login (optional)
 
-## Deploy on Vercel
+🔄 Recurring Bills & Subscriptions
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Learn More
+To learn more about Next.js, check out the following:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-=======
-# moneywise-finance-tracker
-💰 MoneyWise is a personal finance management app designed to help users track their income, expenses, and financial goals efficiently. Built with Next.js, Prisma, and PostgreSQL, it provides real-time insights with interactive charts, budget tracking, and AI-powered financial recommendations. 🚀
->>>>>>> f547273fa24c7a2da4edae8c9419a9951b5e51c3
+Next.js Documentation
+
+Next.js Tutorial
+
+Next.js GitHub Repository
+
+Deployment
+The easiest way to deploy your app is using Vercel. Check out the deployment docs.
