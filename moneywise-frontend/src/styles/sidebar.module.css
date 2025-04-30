@@ -1,0 +1,152 @@
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.logo {
+    padding: 2rem 1.5rem;
+    border-bottom: 1px solid rgba(229, 231, 235, 0.5);
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2563eb;
+    margin: 0;
+    letter-spacing: -0.025em;
+}
+
+.nav {
+    flex: 1;
+    padding: 1.5rem 0;
+    overflow-y: auto;
+}
+
+.navItem {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    color: #4b5563;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    margin: 0.25rem 0;
+}
+
+.navItem:hover {
+    color: #2563eb;
+    background-color: rgba(37, 99, 235, 0.05);
+}
+
+.navItem.active {
+    color: #2563eb;
+    background-color: rgba(37, 99, 235, 0.1);
+    font-weight: 600;
+}
+
+.navItem.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: #2563eb;
+    border-radius: 0 4px 4px 0;
+}
+
+.icon {
+    font-size: 1.25rem;
+    margin-right: 1rem;
+    width: 1.5rem;
+    text-align: center;
+}
+
+.label {
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.footer {
+    padding: 1.5rem;
+    border-top: 1px solid rgba(229, 231, 235, 0.5);
+}
+
+.logoutButton {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    color: #ef4444;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 0.5rem;
+}
+
+.logoutButton:hover {
+    background-color: rgba(239, 68, 68, 0.1);
+}
+
+.logoutButton .icon {
+    color: #ef4444;
+}
+
+.logoutButton .label {
+    color: #ef4444;
+}
+
+/* Scrollbar Styles */
+.nav::-webkit-scrollbar {
+    width: 6px;
+}
+
+.nav::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.nav::-webkit-scrollbar-thumb {
+    background: #e5e7eb;
+    border-radius: 3px;
+}
+
+.nav::-webkit-scrollbar-thumb:hover {
+    background: #d1d5db;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 70px;
+    }
+
+    .logo h1,
+    .label,
+    .logoutButton .label {
+        display: none;
+    }
+
+    .navItem {
+        padding: 0.75rem;
+        justify-content: center;
+    }
+
+    .icon {
+        margin: 0;
+        font-size: 1.5rem;
+    }
+
+    .logoutButton {
+        padding: 0.75rem;
+        justify-content: center;
+    }
+} 
