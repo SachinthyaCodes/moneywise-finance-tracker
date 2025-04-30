@@ -11,7 +11,7 @@ app.use(express.json());
 
 // Welcome Route
 app.get("/", (req, res) => {
-  res.send("Welcome to the Finance Management System API!");
+  res.send("Welcome to the Finance Management System API...!");
 });
 
 // ✅ Use Income Routes

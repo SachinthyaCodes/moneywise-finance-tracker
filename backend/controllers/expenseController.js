@@ -6,7 +6,7 @@ exports.getAllExpenses = async (req, res) => {
     const expenses = await prisma.expense.findMany();
     res.json(expenses);
   } catch (error) {
-    res.status(500).json({ error: "Failed to fetch expense records" });
+    res.status(500).json({ error: "Failed to fetch expense records...!" });
   }
 };
 
@@ -18,7 +18,7 @@ exports.addExpense = async (req, res) => {
     });
     res.status(201).json(newExpense);
   } catch (error) {
-    res.status(500).json({ error: "Failed to add expense record" });
+    res.status(500).json({ error: "Failed to add expense record...!" });
   }
 };
 
