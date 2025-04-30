@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useState, useEffect } from "react";
 import "./expensesTable.css"; // Importing the CSS file
 
 interface Expense {
@@ -17,7 +17,17 @@ interface ExpensesTableProps {
 }
 
 const ExpensesTable: FC<ExpensesTableProps> = ({ expenses, onDelete, onEdit, formRef }) => {
-  const [totalExpenses, setTotalExpenses] = useState<number | null>(null); // Ensure state is defined
+  const [totalExpenses, setTotalExpenses] = useState<number | null>(null);
+  const [message, setMessage] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (message) {
+      const timer = setTimeout(() => {
+        setMessage(null);
+      }, 2000); // hide message after 2 seconds
+      return () => clearTimeout(timer);
+    }
+  }, [message]);
 
   const handleCalculateTotal = () => {
     const total = expenses.reduce((sum, item) => sum + item.amount, 0);
@@ -26,12 +36,22 @@ const ExpensesTable: FC<ExpensesTableProps> = ({ expenses, onDelete, onEdit, for
 
   const handleEdit = (expense: Expense) => {
     onEdit(expense);
-    formRef.current?.scrollIntoView({ behavior: "smooth" }); // Scroll to the form
+    setMessage("Edit successful!");
+    formRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const handleDelete = (id: string) => {
+    onDelete(id);
+    setMessage("Delete successful!");
   };
 
   return (
     <div className="expenses-container">
       <h2 className="expenses-title">History of Expenses</h2>
+
+      {/* Message popup */}
+      {message && <div className="popup-message">{message}</div>}
+
       <div className="expenses-table-wrapper">
         <table className="expenses-table">
           <thead>
@@ -53,7 +73,7 @@ const ExpensesTable: FC<ExpensesTableProps> = ({ expenses, onDelete, onEdit, for
                   <td>{item.method}</td>
                   <td className="actions">
                     <button onClick={() => handleEdit(item)} className="edit-btn">✏️</button>
-                    <button onClick={() => onDelete(item.id)} className="delete-btn">❌</button>
+                    <button onClick={() => handleDelete(item.id)} className="delete-btn">❌</button>
                   </td>
                 </tr>
               ))
