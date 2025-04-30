@@ -1,0 +1,10 @@
+.stripe-settings-page {
+  padding: 2rem;
+  min-height: 100vh;
+  background-color: #f8fafc;
+}
+
+.stripe-settings-page__container {
+  max-width: 1200px;
+  margin: 0 auto;
+} 

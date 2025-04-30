@@ -1,0 +1,280 @@
+.feature-card {
+  background: white;
+  border-radius: 2rem;
+  padding: 1rem;
+  transition: all 0.3s ease;
+  height: 100%;
+  padding-right: 1rem;
+  
+  
+  
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.feature-icon {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  margin: 0 auto 1.5rem auto;
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, #4F46E5 0%, #3B82F6 100%);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.floating {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Global Styles */
+.main-container {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #f9fafb, #ffffff);
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 110vh;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  overflow: hidden;
+  padding-left: 0px;
+}
+
+.hero-video-container {
+  position: absolute;
+  top: 50px;
+  left: 20px;
+  
+  width: 95%;
+  height: 80%;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(29, 78, 216, 0.85),
+    rgba(30, 64, 175, 0.95)
+  );
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+  margin-left: 10rem;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-right: 3rem;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  padding-right: 3rem;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* Features Section */
+.features-section {
+  padding: 6rem 0;
+  background: white;
+}
+
+.features-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 4rem;
+  margin-right: -4rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding-right: -3rem;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  width: 100%;
+  margin-right: 8rem;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+}
+
+.feature-image-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.feature-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover .feature-image {
+  transform: scale(1.05);
+}
+
+.feature-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 1.5rem 1.5rem 0.75rem;
+}
+
+.feature-description {
+  color: #6b7280;
+  margin: 0 1.5rem 1.5rem;
+  line-height: 1.5;
+}
+
+/* CTA Section */
+.cta-section {
+  padding: 6rem 0;
+  background: #f8fafc;
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cta-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+}
+
+.cta-subtitle {
+  font-size: 1.25rem;
+  color: #6b7280;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* Button Styles */
+.button {
+  display: inline-flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.button-primary {
+  background: white;
+  color: #1d4ed8;
+}
+
+.button-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+  .container {
+    margin-left: 12rem;
+  }
+  
+  .features-title {
+    margin-right: 12rem;
+  }
+  
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    margin-left: 8rem;
+  }
+  
+  .features-title {
+    margin-right: 8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin-left: 0;
+  }
+  
+  .features-title {
+    margin-right: 0;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}

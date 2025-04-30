@@ -1,0 +1,81 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #4A90E2, #0056b3);
+    padding: 15px 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    width: 90%;
+    z-index: 1000;
+  }
+  
+  .navbar h1 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar ul li {
+    position: relative;
+  }
+  
+  .navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .navbar ul li a:hover {
+    color: #FFD700; /* Gold hover effect */
+  }
+  
+  /* Underline hover effect */
+  .navbar ul li a::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0%;
+    background: #FFD700;
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+  }
+  
+  .navbar ul li a:hover::after {
+    width: 100%;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 668px) {
+    .navbar {
+      flex-direction: column;
+      padding: 15px;
+    }
+  
+    .navbar ul {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+  
+    .navbar ul li a {
+      font-size: 16px;
+    }
+  }
+  

@@ -1,0 +1,117 @@
+"use client";
+
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import Link from 'next/link';
+import { useAuth } from '../context/AuthContext';
+import styles from '../auth.module.css';
+import toast from 'react-hot-toast';
+
+export default function LoginPage() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  const router = useRouter();
+  const { login } = useAuth();
+
+  const validateEmail = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setError('');
+
+    // Email validation
+    if (!validateEmail(email)) {
+      setError('Please enter a valid email address');
+      toast.error('Please enter a valid email address');
+      return;
+    }
+
+    // Password validation
+    if (!password.trim()) {
+      setError('Password is required');
+      toast.error('Password is required');
+      return;
+    }
+
+    setIsLoading(true);
+
+    try {
+      await login(email, password);
+      toast.success('Logged in successfully!');
+      router.push('/');
+    } catch (err: any) {
+      const errorMessage = err.message || 'Failed to login';
+      setError(errorMessage);
+      toast.error(errorMessage);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  return (
+    <div className={styles.authContainer}>
+      <div className={styles.authCard}>
+        <div className={styles.authHeader}>
+          <h1 className={styles.authTitle}>Welcome Back</h1>
+          <p className={styles.authSubtitle}>Sign in to your account</p>
+        </div>
+
+        <form onSubmit={handleSubmit} className={styles.authForm}>
+          <div className={styles.formGroup}>
+            <label htmlFor="email" className={styles.formLabel}>
+              Email
+            </label>
+            <input
+              id="email"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className={styles.formInput}
+              placeholder="Enter your email"
+              required
+              disabled={isLoading}
+            />
+          </div>
+
+          <div className={styles.formGroup}>
+            <label htmlFor="password" className={styles.formLabel}>
+              Password
+            </label>
+            <input
+              id="password"
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className={styles.formInput}
+              placeholder="Enter your password"
+              required
+              disabled={isLoading}
+            />
+          </div>
+
+          {error && <p className={styles.errorMessage}>{error}</p>}
+
+          <button
+            type="submit"
+            className={styles.authButton}
+            disabled={isLoading}
+          >
+            {isLoading ? 'Signing in...' : 'Sign in'}
+          </button>
+
+          <div className={styles.authFooter}>
+            Don't have an account?{' '}
+            <Link href="/register" className={styles.authLink}>
+              Sign up
+            </Link>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+} 
