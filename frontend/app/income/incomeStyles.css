@@ -1,0 +1,30 @@
+/* Sidebar open from the right */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 33%;
+  transform: translateX(100%); /* Initially hidden */
+  transition: transform 0.3s ease-in-out;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 50;
+}
+
+/* When sidebar is open */
+.sidebar.open {
+  transform: translateX(0); /* Bring the sidebar into view */
+}
+
+/* Close Button (X) in the sidebar */
+.close-btn {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
