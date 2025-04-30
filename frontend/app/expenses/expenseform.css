@@ -32,7 +32,7 @@
   }
   
   .input-field:focus {
-    border-color: #631cc0;
+    border-color: #5f1cb8;
     outline: none;
     box-shadow: 0px 0px 5px rgba(255, 107, 107, 0.5);
   }

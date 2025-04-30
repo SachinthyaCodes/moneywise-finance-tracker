@@ -132,7 +132,7 @@
 }
 
 .calculate-btn:hover {
-  background: #044183;
+  background: #053c77;
 }
 
 /* Responsive Design */
@@ -150,7 +150,7 @@
 .popup-message {
   background-color: #d4edda;
   color: #155724;
-  border: 1px solid #c3e6cb;
+  border: 1px solid #b8d8c0;
   padding: 10px 15px;
   margin: 10px 0;
   border-radius: 5px;
