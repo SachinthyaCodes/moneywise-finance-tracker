@@ -35,7 +35,7 @@ const ExpensesForm: FC<ExpensesFormProps> = ({ onAddExpense, onUpdateExpense, ed
     e.preventDefault();
 
     if (!category || !amount || !date || !method) {
-      alert("Please fill all fields.");
+      alert("Please fill all fields.....");
       return;
     }
 
@@ -45,7 +45,7 @@ const ExpensesForm: FC<ExpensesFormProps> = ({ onAddExpense, onUpdateExpense, ed
     today.setHours(0, 0, 0, 0);
 
     if (selectedDate > today) {
-      alert("Date cannot be in the future.");
+      alert("Date cannot be in the future...");
       return;
     }
 
