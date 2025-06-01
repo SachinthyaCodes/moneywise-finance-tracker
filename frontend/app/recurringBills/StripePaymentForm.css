@@ -1,0 +1,94 @@
+.stripe-payment-form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.stripe-payment-form__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.stripe-payment-form__details {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+}
+
+.stripe-payment-form__details p {
+  margin: 0.5rem 0;
+  color: #4a5568;
+  font-size: 1rem;
+}
+
+.stripe-payment-form__form {
+  margin-bottom: 1.5rem;
+}
+
+.stripe-payment-form__actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.stripe-payment-form__button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.stripe-payment-form__button--primary {
+  background: #4CAF50;
+  color: white;
+}
+
+.stripe-payment-form__button--primary:hover {
+  background: #45a049;
+}
+
+.stripe-payment-form__button--primary:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+
+.stripe-payment-form__button--secondary {
+  background: #f8f9fa;
+  color: #4a5568;
+}
+
+.stripe-payment-form__button--secondary:hover {
+  background: #e9ecef;
+}
+
+/* Stripe Elements customization */
+.StripeElement {
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  background: white;
+  margin-bottom: 1rem;
+}
+
+.StripeElement--focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 1px #4CAF50;
+}
+
+.StripeElement--invalid {
+  border-color: #f44336;
+}
+
+.StripeElement--webkit-autofill {
+  background-color: #fefde5 !important;
+} 

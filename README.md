@@ -1,41 +1,71 @@
-<<<<<<< HEAD
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💰 MoneyWise Finance Tracker
 
-## Getting Started
+MoneyWise is a personal finance management app designed to help users efficiently track their income, expenses, and financial goals. Built with **Next.js**, **Prisma**, and **PostgreSQL**, it provides real-time insights with interactive charts, budget tracking, and AI-powered financial recommendations.
 
-First, run the development server:
+---
 
-```bash
+## 🚀 Features
+
+- **Income & Expense Tracking:** Log and categorize your transactions effortlessly.
+- **Visualized Charts and Summaries:** Gain insights with interactive data visualizations.
+- **Goal Setting:** Set, monitor, and achieve your financial goals.
+- **AI-powered Financial Insights:** Receive smart recommendations to optimize your finances.
+- **Secure Login (optional):** Protect your data with secure authentication.
+- **Recurring Bills & Subscriptions:** Manage and track regular payments and subscriptions.
+
+---
+
+## 🛠️ Getting Started
+
+Follow these steps to run the development server locally:
+
+Install dependencies
+npm install
+
+Start the development server
 npm run dev
-# or
+
+or
 yarn dev
-# or
+
+or
 pnpm dev
-# or
+
+or
 bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Then open [http://localhost:3000](http://localhost:3000) in your browser to view the app.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+You can start editing the app by modifying `app/page.tsx`. The page auto-updates as you save the file.
 
-## Learn More
+This project uses `next/font` to automatically optimize and load [Geist](https://vercel.com/font), a modern font family from Vercel.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📦 Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The recommended way to deploy your app is using [Vercel](https://vercel.com/).  
+Refer to the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📚 Learn More
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-=======
-# moneywise-finance-tracker
-💰 MoneyWise is a personal finance management app designed to help users track their income, expenses, and financial goals efficiently. Built with Next.js, Prisma, and PostgreSQL, it provides real-time insights with interactive charts, budget tracking, and AI-powered financial recommendations. 🚀
->>>>>>> f547273fa24c7a2da4edae8c9419a9951b5e51c3
+- [Next.js Documentation](https://nextjs.org/docs) - Learn about features and API.
+- [Next.js Tutorial](https://nextjs.org/learn) - Interactive Next.js tutorial.
+- [Next.js GitHub Repository](https://github.com/vercel/next.js) - Contribute and explore the codebase.
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please open issues or submit pull requests for improvements and bug fixes.
+
+---
+
+## 📝 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
