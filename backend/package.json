@@ -1,0 +1,38 @@
+{
+  "name": "moneywise-backend",
+  "version": "1.0.0",
+  "description": "Backend for MoneyWise Finance Tracker",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js --ignore 'node_modules/'",
+    "dev:debug": "nodemon --inspect server.js",
+    "dev:verbose": "nodemon server.js --verbose"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/bcryptjs": "^3.0.0",
+    "@types/jsonwebtoken": "^9.0.9",
+    "axios": "^1.8.4",
+    "bcryptjs": "^2.4.3",
+    "chart.js": "^4.4.8",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "helmet": "^7.0.0",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.0.3",
+    "node-cron": "^3.0.3",
+    "nodemailer": "^6.9.1",
+    "pg": "^8.13.3",
+    "react-chartjs-2": "^5.3.0",
+    "react-hot-toast": "^2.5.2",
+    "stripe": "^12.0.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
