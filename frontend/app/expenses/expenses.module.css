@@ -1,0 +1,90 @@
+.expensesPage {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.expensesHeader {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.expensesTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.expensesSubtitle {
+  font-size: 1.125rem;
+  color: #6b7280;
+}
+
+.expensesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.expensesCard {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.expensesCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-color: #3b82f6;
+}
+
+.expensesCardContent {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.expensesCardIcon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.expensesCardTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.expensesCardDescription {
+  font-size: 0.875rem;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .expensesPage {
+    padding: 1rem;
+  }
+
+  .expensesTitle {
+    font-size: 1.75rem;
+  }
+
+  .expensesSubtitle {
+    font-size: 1rem;
+  }
+
+  .expensesGrid {
+    grid-template-columns: 1fr;
+  }
+} 
