@@ -1,10 +1,10 @@
-# 💰 MoneyWise Finance Tracker
+# MoneyWise Finance Tracker
 
 MoneyWise is a personal finance management app designed to help users efficiently track their income, expenses, and financial goals. Built with **Next.js**, **Prisma**, and **PostgreSQL**, it provides real-time insights with interactive charts, budget tracking, and AI-powered financial recommendations.
 
 ---
 
-## 🚀 Features
+## Features
 
 - **Income & Expense Tracking:** Log and categorize your transactions effortlessly.
 - **Visualized Charts and Summaries:** Gain insights with interactive data visualizations.
@@ -15,7 +15,7 @@ MoneyWise is a personal finance management app designed to help users efficientl
 
 ---
 
-## 🛠️ Getting Started
+## Getting Started
 
 Follow these steps to run the development server locally:
 
@@ -43,14 +43,14 @@ This project uses `next/font` to automatically optimize and load [Geist](https:/
 
 ---
 
-## 📦 Deployment
+## Deployment
 
 The recommended way to deploy your app is using [Vercel](https://vercel.com/).  
 Refer to the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 ---
 
-## 📚 Learn More
+## Learn More
 
 - [Next.js Documentation](https://nextjs.org/docs) - Learn about features and API.
 - [Next.js Tutorial](https://nextjs.org/learn) - Interactive Next.js tutorial.
@@ -58,14 +58,7 @@ Refer to the [Next.js deployment documentation](https://nextjs.org/docs/deployme
 
 ---
 
-## 🤝 Contributing
+##Contributing
 
 Contributions are welcome! Please open issues or submit pull requests for improvements and bug fixes.
 
----
-
-## 📝 License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
